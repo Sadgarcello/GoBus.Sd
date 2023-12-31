@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoBus.Sd</title>
+    
+<style>
+    
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dhurjati&family=Marhey&family=Reem+Kufi:wght@500&family=Scheherazade+New&family=Tajawal:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
+
+
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .wrapper{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        flex-wrap: wrap;
+    }
+    .right-col,.left-col{
+        flex-basis: 50%;
+        height: 100vh;
+        position: relative;
+    }
+    .logo{
+        display: block;
+        width: 80px;
+        margin-top: 30px;
+        margin-left: 120px;
+
+    }
+    .content{
+        max-width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 120px;
+        transform: translateY(-50%);
+
+    }
+    .content h1{
+        color: rgb(184, 40, 40);
+        font-size: 70px;
+        line-height: 70px;
+        margin: 25px 0;
+        font-family: 'Aref Ruqaa', serif;
+        
+    }
+    .content p{
+        color: #333232;
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 50px;
+        font-weight: 600;
+        font-family: 'Bebas Neue', sans-serif;
+font-family: 'Dhurjati', sans-serif;
+font-family: 'Marhey', sans-serif;
+font-family: 'Reem Kufi', sans-serif;
+font-family: 'Scheherazade New', serif;
+font-family: 'Tajawal', sans-serif;
+
+    }
+     p{
+        color: #333232;
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 50px;
+        font-weight: 500;
+        font-family: 'Bebas Neue', sans-serif;
+font-family: 'Dhurjati', sans-serif;
+font-family: 'Marhey', sans-serif;
+font-family: 'Reem Kufi', sans-serif;
+font-family: 'Scheherazade New', serif;
+font-family: 'Tajawal', sans-serif;
+     }
+    button{
+        width: 200px;
+        border: none;
+        background-color: rgb(184, 40, 40);
+        box-shadow: 0px 10px 10px 1px rgba(219,219,219,0.5) ;
+        padding: 25px 0;
+        color: white;
+        outline: none;
+        font-size: 15px;
+        cursor: pointer;
+        font-weight: 600;
+        font-family: 'Dhurjati', sans-serif;
+font-family: 'Marhey', sans-serif;
+font-family: 'Reem Kufi', sans-serif;
+font-family: 'Scheherazade New', serif;
+font-family: 'Tajawal', sans-serif;
+
+    }
+    .slider{
+        width: 100%;
+        height: 60%;
+        display: flex;
+    }
+    .slider img{
+        width: 100%;
+    }
+    .slider-content{
+        width:100% ;
+        height: 40%;
+        background:rgb(184, 40, 40); 
+        padding-top: 30px;
+        padding-left: 30px;
+        box-sizing: border-box;
+    }
+    .slider-content h2 {
+        font-size: 26px;
+        font-weight: 800;
+        color:white ;
+        font-family: 'Dhurjati', sans-serif;
+        font-family: 'Marhey', sans-serif;
+        font-family: 'Reem Kufi', sans-serif;
+        font-family: 'Scheherazade New', serif;
+        font-family: 'Tajawal', sans-serif;
+
+    }
+    .slider-content p{
+        color: #bfffdd;
+        font-size:16px ;
+        line-height: 24px;
+        margin-bottom: 20px
+    }
+    hr{
+        border: none;
+        width: 270px;
+        height: 1px;
+        background: #b5e3cf;
+        margin: 20px 0 30px;
+    }
+    .controller{
+        width: 120px;
+        padding:15px ;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .controller img{
+        width: 27px;
+        cursor: pointer;
+        
+    }
+    .vertical-line{
+        width: 2px;
+        height: 30px;
+        background: #b5e3cf;
+    }
+    a{
+text-decoration: none;
+color: white;
+font-size: 20px;
+    }
+    
+   
+    @media only screen and (max-width:800px) {
+        .logo{
+            margin: 30px auto;
+        }
+        .left-col, .right-col{
+            flex-basis: 100%;
+        }
+        .content{
+            left: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .content h1{
+            font-size: 54px;
+            line-height: 38px;
+        }
+        .slider{
+            height: auto;
+        }
+        .slider-content{
+            height: auto;
+        }
+        @media(max-width:328px){
+            .content h1{
+                line-height:50px ;
+            }
+            .button{
+                margin-bottom: 15px;
+                }
+            }
+
+        }
+    
+</style>
+</head>
+
+   <body>
+
+    <div class="wrapper">
+
+        <div class="left-col">
+
+            <img src="" class="logo">
+
+              <div class="content">
+
+                <h1>احجز مقعدك من المنزل</h1>
+                <hr>
+                <p>قوباص توفر خدمات النقل البري العام داخل المدن الرئيسية في كل من: مدني ، القضارف ، كسلا ، حلفا الجديدة، بورتسودان ,  عطبرة ،  دنقلا ، حلفا القديمة ، سنجة ، الدمازين ، سنار ، ربك  كوستي  . ومسارات محددة وفقًا للجداول التشغيلية و مستوى حركة المرور في السودان و أمن طرق السفر . مع قو باص احجز مقعدك من بيتك  </p>
+
+                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                <div class="elfsight-app-21f837a6-9660-425d-9cf2-456e8df768c0" data-elfsight-app-lazy></div>
+                
+
+             </div>
+
+        </div>
+
+        <div class="right-col">
+            <div class="slider">
+                <img src="photos/kasala.jpg" alt="" id="slide">
+            </div>
+            <div class="slider-content">
+                <h2>لماذا احجز تذكرتي عن طريق قوباص؟</h2>
+                <hr>
+                <p class="text">أمن و سلامة عملائنا هي اولويتنا لذلك قمنا بعمل منصة 
+                    القافلة التي تهدف لضمان الطرق الآمنة لعميلنا و ترتيب
+                     إجرائات السفر الخاصة بالعميل من المنزل و نسأل اللَه ان يصلح حال بلادنا العزيز
+                    </p>
+                <div class="controller">
+                    <img src="previous.png" alt="" id="backBtn">
+                    <div class="vertical-line"></div>
+                    <img src="next.png" alt="" id="nextBtn">
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+    
+
+<script>
+var slide = document.getElementById("slide")
+var backBtn = document.getElementById("backBtn")  
+var nextBtn = document.getElementById("nextBtn")
+var slideimages = new Array (
+    "photos/nature.jpg",
+    "photos/nature3.jpg",
+    "photos/nature5.jpg",
+    "photos/sudan.webp"
+    
+    
+    
+)
+let i = 0;
+nextBtn.onclick = function(){
+    if(i<3){
+        slide.src = slideimages[i+1];
+        i++;
+    }
+}
+    backBtn.onclick = function(){
+    if(i>0){
+        slide.src = slideimages[i-1];
+        i--;
+    }
+    
+}
+</script>
+
+
+ </body>
+
+</html>
